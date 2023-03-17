@@ -1,16 +1,14 @@
-# weather_app
 
-A new Flutter project.
 
-## Getting Started
 
-This project is a starting point for a Flutter application.
+#Weather App
 
-A few resources to get you started if this is your first Flutter project:
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+This is a mobile weather app developed in Flutter, which displays the current weather conditions, hourly forecast, and 5-day forecast for the entered city.
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Features
+Displays the current weather conditions such as temperature, humidity, wind speed, and visibility
+Provides an hourly forecast for the next 24 hours
+Shows the 5-day forecast with the daily minimum and maximum temperatures
+User can search for the weather of any city
+Displays a different background image depending on the weather condition of the city

@@ -19,7 +19,7 @@ class WeatherApp extends StatelessWidget {
         ),
         actions: [
           Container(
-            child: Image.asset('assets/menu.png'),color: Colors.white,
+            child: Image.asset('assets/menu-white.jpg'),
           )
         ],
       ),

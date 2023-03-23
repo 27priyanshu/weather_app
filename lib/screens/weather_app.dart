@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class WeatherApp extends StatelessWidget {
@@ -58,16 +59,20 @@ class WeatherApp extends StatelessWidget {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           SizedBox(
-                            height: 120,
+                            height: 150,
                           ),
                           Text("Delhi",
                               style: GoogleFonts.lato(
                                   fontSize: 35,
                                   fontWeight: FontWeight.bold,
                                   color: Colors.white)),
-                          Text("Hello",
+                          SizedBox(
+                            height: 5,
+                          ),
+                          Text('07:50 PM - Monday, 24 Mar 2023',
                               style: GoogleFonts.lato(
-                                  fontSize: 22,
+                                  fontSize: 14,
+                                  fontWeight: FontWeight.bold,
 
                                   // fontWeight: FontWeight.bold,
                                   color: Colors.white)),
@@ -79,17 +84,23 @@ class WeatherApp extends StatelessWidget {
                           // SizedBox(
                           //   height: 120,
                           // ),
-                          Text("Delhi",
+                          Text("24\u2103",
                               style: GoogleFonts.lato(
-                                  fontSize: 35,
-                                  fontWeight: FontWeight.bold,
+                                  fontSize: 85,
+                                  fontWeight: FontWeight.w300,
                                   color: Colors.white)),
-                          Text("Hello",
-                              style: GoogleFonts.lato(
-                                  fontSize: 22,
+                          Row(
+                            children: [
+                              SvgPicture.asset('assets/moon.svg ',
+                                  width: 34, height: 34, color: Colors.white),
+                              Text("Hello",
+                                  style: GoogleFonts.lato(
+                                      fontSize: 22,
 
-                                  // fontWeight: FontWeight.bold,
-                                  color: Colors.white)),
+                                      // fontWeight: FontWeight.bold,
+                                      color: Colors.white)),
+                            ],
+                          ),
                         ],
                       ),
                     ],

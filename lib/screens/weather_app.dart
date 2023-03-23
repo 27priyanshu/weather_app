@@ -36,23 +36,89 @@ class WeatherApp extends StatelessWidget {
           child: Stack(
         children: [
           Image.asset(
-            'assets/sunny2.jpg',
+            'assets/night.jpg',
             fit: BoxFit.cover,
             height: double.infinity,
             width: double.infinity,
           ),
           Container(
+            decoration: BoxDecoration(color: Colors.black38),
+          ),
+          Container(
             padding: EdgeInsets.all(20),
             child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                SizedBox(
-                  height: 120,
+                Expanded(
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          SizedBox(
+                            height: 120,
+                          ),
+                          Text("Delhi",
+                              style: GoogleFonts.lato(
+                                  fontSize: 35,
+                                  fontWeight: FontWeight.bold,
+                                  color: Colors.white)),
+                          Text("Hello",
+                              style: GoogleFonts.lato(
+                                  fontSize: 22,
+
+                                  // fontWeight: FontWeight.bold,
+                                  color: Colors.white)),
+                        ],
+                      ),
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          // SizedBox(
+                          //   height: 120,
+                          // ),
+                          Text("Delhi",
+                              style: GoogleFonts.lato(
+                                  fontSize: 35,
+                                  fontWeight: FontWeight.bold,
+                                  color: Colors.white)),
+                          Text("Hello",
+                              style: GoogleFonts.lato(
+                                  fontSize: 22,
+
+                                  // fontWeight: FontWeight.bold,
+                                  color: Colors.white)),
+                        ],
+                      ),
+                    ],
+                  ),
                 ),
-                Text("Delhi",
-                    style: GoogleFonts.lato(
-                        fontSize: 35,
-                        fontWeight: FontWeight.bold,
-                        color: Colors.white)),
+                Column(
+                  children: [
+                    Container(
+                      margin: EdgeInsets.symmetric(vertical: 40),
+                      decoration: BoxDecoration(
+                          border: Border.all(color: Colors.white30)),
+                    )
+                  ],
+                ),
+                Row(
+                  children: [
+                    Text("Delhi",
+                        style: GoogleFonts.lato(
+                            fontSize: 35,
+                            fontWeight: FontWeight.bold,
+                            color: Colors.white)),
+                    Text("Hello",
+                        style: GoogleFonts.lato(
+                            fontSize: 22,
+
+                            // fontWeight: FontWeight.bold,
+                            color: Colors.white)),
+                  ],
+                ),
               ],
             ),
           )

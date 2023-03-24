@@ -91,7 +91,7 @@ class WeatherApp extends StatelessWidget {
                                   color: Colors.white)),
                           Row(
                             children: [
-                              SvgPicture.asset('assets/moon.svg ',
+                              SvgPicture.asset('assets/moon ',
                                   width: 34, height: 34, color: Colors.white),
                               Text("Hello",
                                   style: GoogleFonts.lato(

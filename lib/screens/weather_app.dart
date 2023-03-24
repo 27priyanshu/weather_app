@@ -54,6 +54,7 @@ class WeatherApp extends StatelessWidget {
                 Expanded(
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
@@ -91,13 +92,18 @@ class WeatherApp extends StatelessWidget {
                                   color: Colors.white)),
                           Row(
                             children: [
-                              SvgPicture.asset('assets/moon ',
-                                  width: 34, height: 34, color: Colors.white),
-                              Text("Hello",
+                              Icon(
+                                Icons.nightlight_outlined,
+                                color: Colors.white,
+                                size: 30.0,
+                              ),
+                              SizedBox(
+                                width: 10,
+                              ),
+                              Text("Night",
                                   style: GoogleFonts.lato(
-                                      fontSize: 22,
-
-                                      // fontWeight: FontWeight.bold,
+                                      fontSize: 25,
+                                      fontWeight: FontWeight.w500,
                                       color: Colors.white)),
                             ],
                           ),
@@ -117,17 +123,65 @@ class WeatherApp extends StatelessWidget {
                 ),
                 Row(
                   children: [
-                    Text("Delhi",
-                        style: GoogleFonts.lato(
-                            fontSize: 35,
-                            fontWeight: FontWeight.bold,
-                            color: Colors.white)),
-                    Text("Hello",
-                        style: GoogleFonts.lato(
-                            fontSize: 22,
+                    Column(
+                      children: [
+                        Text("Wind",
+                            style: GoogleFonts.lato(
+                                fontSize: 14,
+                                fontWeight: FontWeight.bold,
+                                color: Colors.white)),
+                        Text("10",
+                            style: GoogleFonts.lato(
+                                fontSize: 22,
 
-                            // fontWeight: FontWeight.bold,
-                            color: Colors.white)),
+                                // fontWeight: FontWeight.bold,
+                                color: Colors.white)),
+                        Text("km/h",
+                            style: GoogleFonts.lato(
+                                fontSize: 14,
+
+                                // fontWeight: FontWeight.bold,
+                                color: Colors.white)),
+                        Stack(
+                          children: [
+                            Container(
+                              height: 5,
+                              width: 50,
+                              color: Colors.white38,
+                            ),
+                            Container(
+                              height: 5,
+                              width: 5,
+                              color: Colors.greenAccent,
+                            )
+                          ],
+                        ),
+                      ],
+                    ),
+                    SizedBox(
+                      width: 120,
+                    ),
+                    Column(
+                      children: [
+                        Text("Rain",
+                            style: GoogleFonts.lato(
+                                fontSize: 14,
+                                fontWeight: FontWeight.bold,
+                                color: Colors.white)),
+                        Text("2",
+                            style: GoogleFonts.lato(
+                                fontSize: 22,
+
+                                // fontWeight: FontWeight.bold,
+                                color: Colors.white)),
+                        Text("%",
+                            style: GoogleFonts.lato(
+                                fontSize: 14,
+
+                                // fontWeight: FontWeight.bold,
+                                color: Colors.white)),
+                      ],
+                    ),
                   ],
                 ),
               ],

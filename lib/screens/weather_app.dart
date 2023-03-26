@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:weather_app/model/weather_locations.dart';
+import 'package:weather_app/widgets/single_weather.dart';
 
 class WeatherApp extends StatelessWidget {
   const WeatherApp({super.key});
@@ -46,196 +48,46 @@ class WeatherApp extends StatelessWidget {
             decoration: BoxDecoration(color: Colors.black38),
           ),
           Container(
-            padding: EdgeInsets.all(20),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Expanded(
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          SizedBox(
-                            height: 150,
-                          ),
-                          Text("Delhi",
-                              style: GoogleFonts.lato(
-                                  fontSize: 35,
-                                  fontWeight: FontWeight.bold,
-                                  color: Colors.white)),
-                          SizedBox(
-                            height: 5,
-                          ),
-                          Text('07:50 PM - Monday, 24 Mar 2023',
-                              style: GoogleFonts.lato(
-                                  fontSize: 14,
-                                  fontWeight: FontWeight.bold,
-
-                                  // fontWeight: FontWeight.bold,
-                                  color: Colors.white)),
-                        ],
-                      ),
-                      Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          // SizedBox(
-                          //   height: 120,
-                          // ),
-                          Text("24\u2103",
-                              style: GoogleFonts.lato(
-                                  fontSize: 85,
-                                  fontWeight: FontWeight.w300,
-                                  color: Colors.white)),
-                          Row(
-                            children: [
-                              Icon(
-                                Icons.nightlight_outlined,
-                                color: Colors.white,
-                                size: 30.0,
-                              ),
-                              SizedBox(
-                                width: 10,
-                              ),
-                              Text("Night",
-                                  style: GoogleFonts.lato(
-                                      fontSize: 25,
-                                      fontWeight: FontWeight.w500,
-                                      color: Colors.white)),
-                            ],
-                          ),
-                        ],
-                      ),
-                    ],
-                  ),
-                ),
-                Column(
-                  children: [
-                    Container(
-                      margin: EdgeInsets.symmetric(vertical: 40),
-                      decoration: BoxDecoration(
-                          border: Border.all(color: Colors.white30)),
-                    )
-                  ],
-                ),
-                Padding(
-                  padding: const EdgeInsets.fromLTRB(0, 0, 0, 20),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Column(
-                        children: [
-                          Text("Wind",
-                              style: GoogleFonts.lato(
-                                  fontSize: 14,
-                                  fontWeight: FontWeight.bold,
-                                  color: Colors.white)),
-                          Text("10",
-                              style: GoogleFonts.lato(
-                                  fontSize: 22,
-
-                                  // fontWeight: FontWeight.bold,
-                                  color: Colors.white)),
-                          Text("km/h",
-                              style: GoogleFonts.lato(
-                                  fontSize: 14,
-
-                                  // fontWeight: FontWeight.bold,
-                                  color: Colors.white)),
-                          Stack(
-                            children: [
-                              Container(
-                                height: 5,
-                                width: 50,
-                                color: Colors.white38,
-                              ),
-                              Container(
-                                height: 5,
-                                width: 10,
-                                color: Colors.greenAccent,
-                              )
-                            ],
-                          ),
-                        ],
-                      ),
-                      Column(
-                        children: [
-                          Text("Rain",
-                              style: GoogleFonts.lato(
-                                  fontSize: 14,
-                                  fontWeight: FontWeight.bold,
-                                  color: Colors.white)),
-                          Text("2",
-                              style: GoogleFonts.lato(
-                                  fontSize: 22,
-
-                                  // fontWeight: FontWeight.bold,
-                                  color: Colors.white)),
-                          Text("%",
-                              style: GoogleFonts.lato(
-                                  fontSize: 14,
-
-                                  // fontWeight: FontWeight.bold,
-                                  color: Colors.white)),
-                          Stack(
-                            children: [
-                              Container(
-                                height: 5,
-                                width: 50,
-                                color: Colors.white38,
-                              ),
-                              Container(
-                                height: 5,
-                                width: 5,
-                                color: Colors.greenAccent,
-                              )
-                            ],
-                          ),
-                        ],
-                      ),
-                      Column(
-                        children: [
-                          Text("Humidity",
-                              style: GoogleFonts.lato(
-                                  fontSize: 14,
-                                  fontWeight: FontWeight.bold,
-                                  color: Colors.white)),
-                          Text("10",
-                              style: GoogleFonts.lato(
-                                  fontSize: 22,
-
-                                  // fontWeight: FontWeight.bold,
-                                  color: Colors.white)),
-                          Text("%",
-                              style: GoogleFonts.lato(
-                                  fontSize: 14,
-
-                                  // fontWeight: FontWeight.bold,
-                                  color: Colors.white)),
-                          Stack(
-                            children: [
-                              Container(
-                                height: 5,
-                                width: 50,
-                                color: Colors.white38,
-                              ),
-                              Container(
-                                height: 5,
-                                width: 40,
-                                color: Colors.greenAccent,
-                              )
-                            ],
-                          ),
-                        ],
-                      ),
-                    ],
-                  ),
-                ),
-              ],
-            ),
+            margin: EdgeInsets.only(top: 140, left: 15),
+            child: Row(children: [
+              Container(
+                margin: EdgeInsets.symmetric(horizontal: 5),
+                width: 12,
+                height: 5,
+                decoration: BoxDecoration(
+                    color: Colors.white,
+                    borderRadius: BorderRadius.all(Radius.circular(5))),
+              ),
+              Container(
+                margin: EdgeInsets.symmetric(horizontal: 5),
+                width: 5,
+                height: 5,
+                decoration: BoxDecoration(
+                    color: Colors.white54,
+                    borderRadius: BorderRadius.all(Radius.circular(5))),
+              ),
+              Container(
+                margin: EdgeInsets.symmetric(horizontal: 5),
+                width: 5,
+                height: 5,
+                decoration: BoxDecoration(
+                    color: Colors.white54,
+                    borderRadius: BorderRadius.all(Radius.circular(5))),
+              ),
+              Container(
+                margin: EdgeInsets.symmetric(horizontal: 5),
+                width: 5,
+                height: 5,
+                decoration: BoxDecoration(
+                    color: Colors.white54,
+                    borderRadius: BorderRadius.all(Radius.circular(5))),
+              )
+            ]),
+          ),
+          PageView.builder(
+            scrollDirection: Axis.horizontal,
+            itemCount: locationList.length,
+            itemBuilder: (ctx, i) => SingleWeather(),
           )
         ],
       )),

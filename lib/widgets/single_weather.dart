@@ -2,7 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class SingleWeather extends StatelessWidget {
-  const SingleWeather({super.key});
+  // const SingleWeather({super.key});
+  final int index;
+  SingleWeather(this.index);
 
   @override
   Widget build(BuildContext context) {

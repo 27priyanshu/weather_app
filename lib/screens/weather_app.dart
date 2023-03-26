@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:weather_app/model/weather_locations.dart';
 import 'package:weather_app/widgets/single_weather.dart';
 
 class WeatherApp extends StatelessWidget {
@@ -84,6 +85,8 @@ class WeatherApp extends StatelessWidget {
             ]),
           ),
           PageView.builder(
+            scrollDirection: Axis.horizontal,
+            itemCount: locationList.length,
             itemBuilder: (ctx, i) => SingleWeather(),
           )
         ],

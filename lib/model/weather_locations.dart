@@ -50,4 +50,13 @@ final locationList = [
       wind: 5,
       rain: 15,
       humidity: 61),
+  WeatherLocation(
+      city: 'Kashmir',
+      dateTime: '07:50 PM - Monday, 24 Mar 2023',
+      temperature: "4\u2103",
+      weatherType: 'Night',
+      iconUrl: 'assets/moon.png',
+      wind: 8,
+      rain: 7,
+      humidity: 82),
 ];

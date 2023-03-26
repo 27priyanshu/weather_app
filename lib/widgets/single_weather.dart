@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
+import '../model/weather_locations.dart';
+
 class SingleWeather extends StatelessWidget {
   // const SingleWeather({super.key});
   final int index;
@@ -25,7 +27,7 @@ class SingleWeather extends StatelessWidget {
                     SizedBox(
                       height: 150,
                     ),
-                    Text("Delhi",
+                    Text(locationList[index].city,
                         style: GoogleFonts.lato(
                             fontSize: 35,
                             fontWeight: FontWeight.bold,
@@ -33,7 +35,7 @@ class SingleWeather extends StatelessWidget {
                     SizedBox(
                       height: 5,
                     ),
-                    Text('07:50 PM - Monday, 24 Mar 2023',
+                    Text(locationList[index].dateTime,
                         style: GoogleFonts.lato(
                             fontSize: 14,
                             fontWeight: FontWeight.bold,
@@ -48,7 +50,7 @@ class SingleWeather extends StatelessWidget {
                     // SizedBox(
                     //   height: 120,
                     // ),
-                    Text("24\u2103",
+                    Text(locationList[index].temperature,
                         style: GoogleFonts.lato(
                             fontSize: 85,
                             fontWeight: FontWeight.w300,
@@ -63,7 +65,7 @@ class SingleWeather extends StatelessWidget {
                         SizedBox(
                           width: 10,
                         ),
-                        Text("Night",
+                        Text(locationList[index].weatherType,
                             style: GoogleFonts.lato(
                                 fontSize: 25,
                                 fontWeight: FontWeight.w500,
@@ -91,18 +93,18 @@ class SingleWeather extends StatelessWidget {
               children: [
                 Column(
                   children: [
-                    Text("Wind",
+                    Text(locationList[index].rain.toString(),
                         style: GoogleFonts.lato(
                             fontSize: 14,
                             fontWeight: FontWeight.bold,
                             color: Colors.white)),
-                    Text("10",
+                    Text(locationList[index].wind.toString(),
                         style: GoogleFonts.lato(
                             fontSize: 22,
 
                             // fontWeight: FontWeight.bold,
                             color: Colors.white)),
-                    Text("km/h",
+                    Text(locationList[index].humidity.toString(),
                         style: GoogleFonts.lato(
                             fontSize: 14,
 

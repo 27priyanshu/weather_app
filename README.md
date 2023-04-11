@@ -1,7 +1,7 @@
 
 
 
-#Weather App 2.0
+# Weather App 2.0
 
 
 This is a mobile weather app developed in Flutter, which displays the current weather conditions, hourly forecast, and 5-day forecast for the entered city.

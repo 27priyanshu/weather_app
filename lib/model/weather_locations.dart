@@ -33,7 +33,7 @@ final locationList = [
       rain: 2,
       humidity: 10),
   WeatherLocation(
-      city: 'Londan',
+      city: 'London',
       dateTime: '02:50 PM - Monday, 24 Mar 2023',
       temperature: "14\u2103",
       weatherType: 'Sunny',

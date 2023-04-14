@@ -20,6 +20,8 @@ Displays a different background image depending on the weather condition of the 
 
 <img width="198" alt="image" src="https://user-images.githubusercontent.com/95427620/227777332-20e84fa1-a486-428d-a3fc-5df53e852563.png">
 
+<img width="197" alt="image" src="https://user-images.githubusercontent.com/95427620/232084261-27a3218e-da7c-4538-a89c-9e2c5dc7fcac.png">
 
-<img width="201" alt="image" src="https://user-images.githubusercontent.com/95427620/227777351-4d9d396e-051b-4b5b-9f3b-ad59c8666428.png">
+<img width="203" alt="image" src="https://user-images.githubusercontent.com/95427620/232084388-5ac3dc1a-15c3-4f13-9999-c02ec7b54984.png">
+
 

@@ -6,6 +6,7 @@ class WeatherLocation {
   final String temperature;
   final String weatherType;
   final String iconUrl;
+  final String backgroundImage;
   final int wind;
   final int rain;
   final int humidity;
@@ -16,6 +17,7 @@ class WeatherLocation {
     required this.temperature,
     required this.weatherType,
     required this.iconUrl,
+    required this.backgroundImage,
     required this.wind,
     required this.rain,
     required this.humidity,
@@ -29,15 +31,17 @@ final locationList = [
       temperature: "24\u2103",
       weatherType: 'Night',
       iconUrl: 'assets/moon.png',
+      backgroundImage: 'assets/moon.png',
       wind: 10,
       rain: 2,
       humidity: 10),
   WeatherLocation(
-      city: 'Londan',
+      city: 'London',
       dateTime: '02:50 PM - Monday, 24 Mar 2023',
       temperature: "14\u2103",
       weatherType: 'Sunny',
       iconUrl: 'assets/sunny2.png',
+      backgroundImage: 'assets/sunny2.png',
       wind: 8,
       rain: 7,
       humidity: 82),
@@ -47,6 +51,7 @@ final locationList = [
       temperature: "10\u2103",
       weatherType: 'Rainy',
       iconUrl: 'assets/cloudy.jpg',
+      backgroundImage: 'assets/cloudy.jpg',
       wind: 5,
       rain: 15,
       humidity: 61),
@@ -56,6 +61,7 @@ final locationList = [
       temperature: "4\u2103",
       weatherType: 'Night',
       iconUrl: 'assets/moon.png',
+      backgroundImage: 'assets/moon.png',
       wind: 8,
       rain: 7,
       humidity: 82),

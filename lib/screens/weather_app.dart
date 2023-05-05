@@ -14,7 +14,8 @@ class WeatherApp extends StatefulWidget {
 
 class _WeatherAppState extends State<WeatherApp> {
   int _currentPage = 0;
-  late String bgImg;
+  late String bgImg ; 
+
 
   _onPageChanged(int index) {
     setState(() {
